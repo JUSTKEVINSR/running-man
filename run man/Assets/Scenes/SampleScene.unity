@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 266877288}
   - component: {fileID: 266877287}
   m_Layer: 0
-  m_Name: platformPack_tilesheet@2_0 (4)
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -342,7 +342,7 @@ GameObject:
   - component: {fileID: 573995435}
   - component: {fileID: 573995434}
   m_Layer: 0
-  m_Name: platformPack_tilesheet@2_0 (7)
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -451,7 +451,7 @@ GameObject:
   - component: {fileID: 674330920}
   - component: {fileID: 674330919}
   m_Layer: 0
-  m_Name: platformPack_tilesheet@2_0 (8)
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -560,7 +560,7 @@ GameObject:
   - component: {fileID: 922123638}
   - component: {fileID: 922123637}
   m_Layer: 0
-  m_Name: platformPack_tilesheet@2_0 (2)
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -823,6 +823,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveAccel: 2
   maxSpeed: 4
+  jumpAccel: 7
+  groundRaycastDistance: 1.2
+  groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &1391581633
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,8 +839,8 @@ GameObject:
   - component: {fileID: 1391581636}
   - component: {fileID: 1391581635}
   - component: {fileID: 1391581634}
-  m_Layer: 0
-  m_Name: platformPack_tilesheet@2_0
+  m_Layer: 8
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -944,7 +949,7 @@ GameObject:
   - component: {fileID: 1657052834}
   - component: {fileID: 1657052833}
   m_Layer: 0
-  m_Name: platformPack_tilesheet@2_0 (9)
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1053,7 +1058,7 @@ GameObject:
   - component: {fileID: 1905349894}
   - component: {fileID: 1905349893}
   m_Layer: 0
-  m_Name: platformPack_tilesheet@2_0 (3)
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1162,7 +1167,7 @@ GameObject:
   - component: {fileID: 1962528142}
   - component: {fileID: 1962528141}
   m_Layer: 0
-  m_Name: platformPack_tilesheet@2_0 (5)
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1271,7 +1276,7 @@ GameObject:
   - component: {fileID: 1972391593}
   - component: {fileID: 1972391592}
   m_Layer: 0
-  m_Name: platformPack_tilesheet@2_0 (1)
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
