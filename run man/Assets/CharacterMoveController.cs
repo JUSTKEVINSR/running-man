@@ -57,6 +57,26 @@ groundRaycastDistance, groundLayerMask);
         velocityVector.x = Mathf.Clamp(velocityVector.x + moveAccel * Time.deltaTime, 0.0f, maxSpeed);
         rig.velocity = velocityVector;
     }
+
+    private Animator anim;
+    private void Start()
+    {
+        rig = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+    }
+    private void Update()
+    {
+        // read input
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (isOnGround)
+            {
+                isJumping = true;
+            }
+        }
+        // change animation
+        anim.SetBool("isOnGround", isOnGround);
+    }
     // Update is called once per frame
     void Update()
     {
