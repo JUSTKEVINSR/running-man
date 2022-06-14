@@ -21,12 +21,16 @@ public class CharacterMoveController : MonoBehaviour
     [Header("Ground Raycast")]
     public float groundRaycastDistance;
     public LayerMask groundLayerMask;
-
+    private Animator anim;
+    private CharacterSoundController sound;
 
     // Start is called before the first frame update
     void Start()
     {
+      
         rig = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+        sound = GetComponent<CharacterSoundController>();
     }
 
     private void FixedUpdate()
@@ -58,12 +62,7 @@ groundRaycastDistance, groundLayerMask);
         rig.velocity = velocityVector;
     }
 
-    private Animator anim;
-    private void Start()
-    {
-        rig = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
-    }
+    
     private void Update()
     {
         // read input
@@ -78,14 +77,5 @@ groundRaycastDistance, groundLayerMask);
         anim.SetBool("isOnGround", isOnGround);
     }
     // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (isOnGround)
-            {
-                isJumping = true;
-            }
-        }
-    }
+  
 }
