@@ -17,6 +17,8 @@ public class CharacterMoveController : MonoBehaviour
 
     private bool isJumping;
     private bool isOnGround;
+    public float jumpAmount = 10;
+
 
     [Header("Ground Raycast")]
     public float groundRaycastDistance;
@@ -68,10 +70,8 @@ groundRaycastDistance, groundLayerMask);
         // read input
         if (Input.GetMouseButtonDown(0))
         {
-            if (isOnGround)
-            {
-                isJumping = true;
-            }
+            rig.AddForce(Vector2.up * jumpAmount, ForceMode2D.Impulse);
+            sound.PlayJump();
         }
         // change animation
         anim.SetBool("isOnGround", isOnGround);
