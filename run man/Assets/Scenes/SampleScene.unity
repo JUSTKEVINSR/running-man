@@ -246,9 +246,10 @@ MonoBehaviour:
   terrainTemplates:
   - {fileID: 620182634}
   terrainTemplateWidth: 8.99
-  gameCamera: {fileID: 0}
-  areaStartOffset: 0
-  areaEndOffset: 0
+  gameCamera: {fileID: 519420031}
+  areaStartOffset: -10
+  areaEndOffset: 5
+  earlyTerrainTemplates: []
 --- !u!114 &620182634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -755,9 +756,10 @@ MonoBehaviour:
   terrainTemplates:
   - {fileID: 673886648721232753}
   terrainTemplateWidth: 8.99
-  gameCamera: {fileID: 0}
-  areaStartOffset: 0
-  areaEndOffset: 0
+  gameCamera: {fileID: 519420031}
+  areaStartOffset: -10
+  areaEndOffset: 5
+  earlyTerrainTemplates: []
 --- !u!114 &673886648721232753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -883,6 +885,7 @@ MonoBehaviour:
   gameCamera: {fileID: 519420031}
   areaStartOffset: -10
   areaEndOffset: 5
+  earlyTerrainTemplates: []
 --- !u!114 &3646316107360853987
 MonoBehaviour:
   m_ObjectHideFlags: 0
