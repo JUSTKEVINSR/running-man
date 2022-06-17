@@ -221,11 +221,46 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &620182631 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7223461106057194345, guid: b29ee691a1876c64c96e82ad28be2406, type: 3}
+  m_PrefabInstance: {fileID: 7223461105590638350}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &620182632 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7223461106057194342, guid: b29ee691a1876c64c96e82ad28be2406, type: 3}
   m_PrefabInstance: {fileID: 7223461105590638350}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &620182633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620182631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2603f4965d2eb284b95f9d7716e0d0f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrainTemplates:
+  - {fileID: 620182634}
+  terrainTemplateWidth: 8.99
+  gameCamera: {fileID: 0}
+  areaStartOffset: 0
+  areaEndOffset: 0
+--- !u!114 &620182634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620182631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61f0fa8b944b864409aab2d9e159e924, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1001910453
 GameObject:
   m_ObjectHideFlags: 0
@@ -612,7 +647,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.28, y: 1.28}
   m_EdgeRadius: 0
 --- !u!1001 &673886648721232749
 PrefabInstance:
@@ -700,6 +735,41 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1421530891086749179, guid: d21915c5186432f499935841465bc7da, type: 3}
   m_PrefabInstance: {fileID: 673886648721232749}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &673886648721232751 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5521806574609806567, guid: d21915c5186432f499935841465bc7da, type: 3}
+  m_PrefabInstance: {fileID: 673886648721232749}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &673886648721232752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673886648721232751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2603f4965d2eb284b95f9d7716e0d0f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrainTemplates:
+  - {fileID: 673886648721232753}
+  terrainTemplateWidth: 8.99
+  gameCamera: {fileID: 0}
+  areaStartOffset: 0
+  areaEndOffset: 0
+--- !u!114 &673886648721232753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673886648721232751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61f0fa8b944b864409aab2d9e159e924, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3646316107360853983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -790,6 +860,41 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5742957038907549091, guid: abce1128f26f73e4db8a116f400a03e5, type: 3}
   m_PrefabInstance: {fileID: 3646316107360853983}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3646316107360853985 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8032563738023091197, guid: abce1128f26f73e4db8a116f400a03e5, type: 3}
+  m_PrefabInstance: {fileID: 3646316107360853983}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3646316107360853986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3646316107360853985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2603f4965d2eb284b95f9d7716e0d0f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrainTemplates:
+  - {fileID: 3646316107360853987}
+  terrainTemplateWidth: 8.99
+  gameCamera: {fileID: 519420031}
+  areaStartOffset: -10
+  areaEndOffset: 5
+--- !u!114 &3646316107360853987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3646316107360853985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61f0fa8b944b864409aab2d9e159e924, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7223461105590638350
 PrefabInstance:
   m_ObjectHideFlags: 0
