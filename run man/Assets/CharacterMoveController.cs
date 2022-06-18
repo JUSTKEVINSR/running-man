@@ -68,6 +68,28 @@ groundRaycastDistance, groundLayerMask);
     public ScoreController score;
     public float scoringRatio;
     private float lastPositionX;
+
+    [Header("GameOver")]
+    public float fallPositionY;
+    public GameObject gameOverScreen;
+    [Header("Camera")]
+    public CameraMoveController gameCamera;
+    private void GameOver()
+    {
+        // set high score
+        score.FinishScoring();
+        // stop camera movement
+        gameCamera.enabled = false;
+        // show gameover
+        gameOverScreen.SetActive(true);
+        // disable this too
+        this.enabled = false;
+    }
+
+
+
+
+
     private void Update()
     {
         // read input
