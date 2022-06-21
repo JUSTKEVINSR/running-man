@@ -41,8 +41,10 @@ public class TerrainGeneratorController : MonoBehaviour
 
     private float lastRemovedPositionX;
 
+    private Dictionary<string, List<GameObject>> pool;
     void Start()
     {
+        pool = new Dictionary<string, List<GameObject>>();
         spawnedTerrain = new List<GameObject>();
         lastGeneratedPositionX = GetHorizontalPositionStart();
         lastRemovedPositionX = lastGeneratedPositionX - terrainTemplateWidth;
@@ -58,7 +60,7 @@ public class TerrainGeneratorController : MonoBehaviour
         }
     }
     private void GenerateTerrain(float posX, TerrainTemplateController forceterrain =
-    null)
+null)
     {
         GameObject item = null;
         if (forceterrain == null)
@@ -71,9 +73,44 @@ public class TerrainGeneratorController : MonoBehaviour
         {
             item = forceterrain.gameObject;
         }
-        GameObject newTerrain = Instantiate(item, transform);
+        //GameObject newTerrain = Instantiate(item, transform);
+        GameObject newTerrain = GenerateFromPool(item, transform);
         newTerrain.transform.position = new Vector2(posX, 0f);
         spawnedTerrain.Add(newTerrain);
+    }
+
+    private GameObject GenerateFromPool(GameObject item, Transform parent)
+    {
+        if (pool.ContainsKey(item.name))
+        {
+            // if item available in pool
+            if (pool[item.name].Count > 0)
+            {
+                GameObject newItemFromPool = pool[item.name][0];
+                pool[item.name].Remove(newItemFromPool);
+                newItemFromPool.SetActive(true);
+                return newItemFromPool;
+            }
+        }
+        else
+        {
+            // if item list not defined, create new one
+            pool.Add(item.name, new List<GameObject>());
+        }
+        // create new one if no item available in pool
+        GameObject newItem = Instantiate(item, parent);
+        newItem.name = item.name;
+        return newItem;
+    }
+
+    private void ReturnToPool(GameObject item)
+    {
+        if (!pool.ContainsKey(item.name))
+        {
+            Debug.LogError("INVALID POOL ITEM!!");
+        }
+        pool[item.name].Add(item);
+        item.SetActive(false);
     }
 
     void Update()
@@ -106,7 +143,8 @@ public class TerrainGeneratorController : MonoBehaviour
         if (terrainToRemove != null)
         {
             spawnedTerrain.Remove(terrainToRemove);
-            Destroy(terrainToRemove);
+            //Destroy(terrainToRemove);
+            ReturnToPool(terrainToRemove);
         }
     }
 
