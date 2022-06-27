@@ -7,6 +7,8 @@ public class CharacterSoundController : MonoBehaviour
     public AudioClip jump;
     public AudioClip scoreHighlight;
     private AudioSource audioPlayer;
+
+
     private void Start()
     {
         audioPlayer = GetComponent<AudioSource>();
